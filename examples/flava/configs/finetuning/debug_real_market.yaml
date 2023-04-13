@@ -1,0 +1,48 @@
+_target_: flava.definitions.FLAVAArguments
+training:
+  _target_: flava.definitions.TrainingArguments
+  lightning:
+    max_steps: 230000
+    gpus: [5]
+    progress_bar_refresh_rate: 1
+    val_check_interval: 200
+    num_sanity_val_steps: 0
+    #strategy: ddp
+  lightning_checkpoint: 
+    dirpath: "./finetune_real_market"
+    filename: flava-{epoch:02d}-{step}
+    save_last: true
+    every_n_train_steps: 250
+    save_on_train_epoch_end: true
+    verbose: true
+    monitor: mAP
+    mode: max
+  lightning_load_from_checkpoint: null
+  seed: -1
+  batch_size: 64
+  num_workers: 4
+  learning_rate: 1e-5
+  adam_eps: 1e-6
+  adam_weight_decay: 0.1
+  adam_betas:
+  - 0.9
+  - 0.98
+  warmup_steps: 2000
+
+datasets:
+  _target_: flava.definitions.TrainingDatasetsInfo
+  selected:  
+  - myvl
+  num_classes: 1039
+  myvl:
+    _target_: flava.definitions.TrainingSingleDatasetInfo
+    train:
+      - _target_: flava.definitions.HFDatasetInfo
+        key: transfer_market_1039
+        subset: default
+    val:
+      - _target_: flava.definitions.HFDatasetInfo
+        key: real_market
+        subset: default
+        split_key_mapping:
+          validation: train
