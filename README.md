@@ -1,11 +1,11 @@
-# TorchMultimodal (Beta Release)
+# Learning Robust Visual-Semantic Embedding for Generalizable Person Re-identification
 
 ## Introduction
-TorchMultimodal is a PyTorch library for training state-of-the-art multimodal multi-task models at scale. It provides:
-- A repository of modular and composable building blocks (models, fusion layers, loss functions, datasets and utilities).
-- A repository of examples that show how to combine these building blocks with components and common infrastructure from across the PyTorch Ecosystem to replicate state-of-the-art models published in the literature. These examples should serve as baselines for ongoing research in the field, as well as a starting point for future work.
 
-As a first open source example, researchers will be able to train and extend FLAVA using TorchMultimodal.
+In this paper, we propose a Multi-Modal Equivalent Transformer called MMET for more robust  visual-semantic embedding learning on visual, textual and visual-textual tasks respectively. To further enhance the robust feature learning in the context of transformer, a dynamic masking mechanism called Masked Multimodal Modeling  strategy (MMM) is introduced to mask boththe image patches and the text tokens, which can jointly works on multimodal or unimodal data and significantly boost the performance of generalizable person Re-ID.
+
+<img src='figs/MMET.png'/>
+
 
 ## Installation
 
