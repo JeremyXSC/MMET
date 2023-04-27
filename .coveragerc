@@ -1,9 +1,0 @@
-[run]
-omit =
-    *tests/*
-    *examples/*
-
-[report]
-omit =
-    *tests/*
-    *examples/*
