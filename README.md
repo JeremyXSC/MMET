@@ -67,3 +67,17 @@ See the [CONTRIBUTING](CONTRIBUTING.md) file for how to help out.
 ## License
 
 TorchMultimodal is BSD licensed, as found in the [LICENSE](LICENSE) file.
+
+## Acknowledgments
+This work was supported by the National Natural Science Foundation of China under Projects (Grant No. 61977045).
+If you have further questions and suggestions, please feel free to contact us (xiangsuncheng17@sjtu.edu.cn).
+
+If you find this code useful in your research, please consider citing:
+```
+@article{xiang2023learning,
+  title={Learning Robust Visual-Semantic Embedding for Generalizable Person Re-identification},
+  author={Xiang, Suncheng and Gao, Jingsheng and Guan, Mengyuan and Ruan, Jiacheng and Zhou, Chengfeng and Liu, Ting and Qian, Dahong and Fu, Yuzhuo},
+  journal={arXiv preprint arXiv:2304.09498},
+  year={2023}
+}
+```
